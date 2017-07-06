@@ -1,0 +1,41 @@
+.form {
+	margin-left: 33%;
+}
+
+#abk {
+	outline: 0;
+	border: none;
+	height: 40px;
+	border-bottom: 2px solid darkcyan;
+}
+
+#submit {
+	margin-left: 10px;
+	background-color: darkcyan;
+	color: white;
+	cursor: pointer;
+	border: 0;
+	width: 170px;
+	height: 40px;
+	border-radius: 5px 10px;
+}
+
+.data {
+	margin-left: 33%;
+}
+
+header {
+	height: 200px;
+	background-color: darkcyan;
+}
+
+#p {
+	font-size: 300%;
+	text-align: center;
+	color: white;
+	margin: 0;
+}
+html {
+	padding: 0;
+	margin: 0;
+}
