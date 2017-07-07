@@ -39,3 +39,18 @@ html {
 	padding: 0;
 	margin: 0;
 }
+
+nav {
+	background-color: #009999;
+}
+
+nav > li > a {
+	text-decoration: none;
+	text-align: center;
+}
+
+nav > li {
+	list-style-type: none;
+	display: inline;
+	padding: 30px 86px;
+}
