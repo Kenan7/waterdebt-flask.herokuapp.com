@@ -34,3 +34,5 @@ def waterdebt():
     name = l[3],
     debt = l[5])
 
+if __name__ == '__main__':
+    app.run()
