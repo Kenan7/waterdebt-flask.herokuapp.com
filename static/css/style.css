@@ -1,3 +1,12 @@
+body {
+	margin: 0;
+}
+
+header {
+	height: 200px;
+	background-color: darkcyan;
+}
+
 .form {
 	margin-left: 33%;
 }
@@ -24,33 +33,25 @@
 	margin-left: 33%;
 }
 
-header {
-	height: 200px;
-	background-color: darkcyan;
-}
-
 #p {
 	font-size: 300%;
 	text-align: center;
 	color: white;
 	margin: 0;
 }
-html {
-	padding: 0;
-	margin: 0;
-}
 
 nav {
 	background-color: #009999;
+	display: flex;
+	justify-content: center;
 }
 
-nav > li > a {
-	text-decoration: none;
-	text-align: center;
-}
-
-nav > li {
-	list-style-type: none;
-	display: inline;
-	padding: 30px 86px;
+nav > button {
+	color: white;
+	width: 20%;
+	background-color: #009999;
+	border: 0;
+	cursor: pointer;
+	padding: 20px;
+	font-size: 105%;
 }
