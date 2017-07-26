@@ -1,3 +1,7 @@
+* {
+	font-family: 'Raleway', sans-serif;
+}
+
 body {
 	margin: 0;
 }
@@ -30,6 +34,7 @@ header {
 }
 
 .data {
+	position: absolute;
 	margin-left: 33%;
 }
 
