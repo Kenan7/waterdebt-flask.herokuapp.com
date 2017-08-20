@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import re
 
 app = Flask(__name__)
-@app.route('/index')
+@app.route('/')
 def function():
     return render_template('index.html')
 
