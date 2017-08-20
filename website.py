@@ -7,6 +7,10 @@ import re
 app = Flask(__name__)
 @app.route('/')
 def function():
+    return redirect(url_for('home'))
+
+@app.route('/home')
+def home():
     return render_template('index.html')
 
 @app.route('/waterdebt', methods=['POST', 'GET'])
