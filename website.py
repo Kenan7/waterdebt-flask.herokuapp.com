@@ -11,30 +11,26 @@ def function():
 
 @app.route('/waterdebt', methods=['POST', 'GET'])
 def waterdebt():
-    error = False
+    error = none
     
-    try:
-        abkodu = request.form['abkodu']
+    abkodu = request.form['abkodu']
 
-        api_url = "http://data.e-gov.az/api/v1/IEGOVService.svc/GetDebtByAbonentCode/{}".format(abkodu)
+    api_url = "http://data.e-gov.az/api/v1/IEGOVService.svc/GetDebtByAbonentCode/{}"
+    .format(abkodu)
     
-        with urllib.request.urlopen(api_url) as url:
-            output = url.read().decode('utf-8')
-            data = json.loads(output)
+    with urllib.request.urlopen(api_url) as url:
+        output = url.read().decode('utf-8')
+        data = json.loads(output)
 
-        html = data['response']['htmlField']
-        soup = BeautifulSoup(html, "html.parser")
-        l = []
+    html = data['response']['htmlField']
+    soup = BeautifulSoup(html, "html.parser")
+    l = []
 
-        for a in soup.find_all('b'):
-            l.append(re.sub(r"[<b>,</b>]","",str(a)))
-    except:
-        err = "Təəssüf ki abonent kodunu səhv yazmısınız. Zəhmət olmasa kodunuzu yoxlayın və yenidən yazın"
-        error = True
+    for a in soup.find_all('b'):
+        l.append(re.sub(r"[<b>,</b>]","",str(a)))
           
     return render_template('index.html',
     error=error,
-    err=err,
     code = l[1],
     name = l[3],
     debt = l[5])
