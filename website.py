@@ -15,8 +15,7 @@ def waterdebt():
     
     abkodu = request.form['abkodu']
 
-    api_url = "http://data.e-gov.az/api/v1/IEGOVService.svc/GetDebtByAbonentCode/{}"
-    .format(abkodu)
+    api_url = "http://data.e-gov.az/api/v1/IEGOVService.svc/GetDebtByAbonentCode/{}".format(abkodu)
     
     with urllib.request.urlopen(api_url) as url:
         output = url.read().decode('utf-8')
