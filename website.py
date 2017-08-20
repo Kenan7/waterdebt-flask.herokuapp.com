@@ -11,7 +11,7 @@ def function():
 
 @app.route('/waterdebt', methods=['POST', 'GET'])
 def waterdebt():
-    error = none
+    error = None
     
     abkodu = request.form['abkodu']
 
