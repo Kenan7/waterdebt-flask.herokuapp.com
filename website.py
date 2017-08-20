@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, url_for
 import urllib.request
 import json
 from bs4 import BeautifulSoup
@@ -7,10 +7,6 @@ import re
 app = Flask(__name__)
 @app.route('/')
 def function():
-    return redirect(url_for('home'))
-
-@app.route('/home')
-def home():
     return render_template('index.html')
 
 @app.route('/waterdebt', methods=['POST', 'GET'])
